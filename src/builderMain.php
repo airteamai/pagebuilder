@@ -2,7 +2,7 @@
 class DOMPage_PluginNode{
 	public $child=array();
 	protected $nodeConf=array();
-	public function appendChild($child){
+	public function appendChild(DOMPage_PluginNode $child){
 		$this->child[]=$child;
 	}
 	public function setConf($id,$value){
@@ -50,6 +50,9 @@ class PageBuilder{
 		$this->pluginNode_html->appendChild($this->pluginNode_head);
 		$this->pluginNode_html->appendChild($this->pluginNode_body);
 	}
+	public function getDOMTree(){
+		return $this->pluginNode_html;
+	}
 	public function build(){
 		$this->domdata="";
 		$this->build_step2_buildDOMData($this->pluginNode_html);
@@ -66,9 +69,7 @@ class PageBuilder{
 	public function getDOMData(){
 		return $this->domdata;
 	}
-	public function getDOMTree(){
-		return $this->pluginNode_html;
-	}
+	
 	protected function parseConf(DOMPage_PluginNode $node){
 		if($node->getConf("type")=="HTMLTag"){
 		$startTag="<".$node->getConf("tag");

@@ -7,6 +7,8 @@ $btn=$weui->createButton("HelloWorld","primary","a",array("href"=>"https://www.b
 $btn1=$weui->createMsgPage("success","操作成功","",array($btn));
 $builder->appendBody($btn1);
 $builder->prebuild();
+
 $builder->build();
-//var_dump(json_encode($builder->getDOMTree()));
-echo $builder->getDOMData();
+var_dump($builder->getDOMTree());
+//
+//echo $builder->getDOMData();
