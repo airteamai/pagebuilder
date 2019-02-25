@@ -1,5 +1,5 @@
 ﻿<?php 
-include("../pagebuilder.php");
+include("../dist/pagebuilder.phar");
 $builder=PageBuilder::create();
 $weui=ui_weui::uiLib_reg($builder);
 $testChild=DOMPage_PluginNode::create();
