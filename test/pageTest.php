@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 include("../pagebuilder.php");
 $builder=PageBuilder::create();
 $weui=ui_weui::uiLib_reg($builder);
@@ -9,6 +9,6 @@ $builder->appendBody($btn1);
 $builder->prebuild();
 
 $builder->build();
-var_dump($builder->getDOMTree());
+//var_dump($builder->getDOMTree());
 //
-//echo $builder->getDOMData();
+echo $builder->getDOMData();
