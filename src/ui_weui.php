@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 class ui_weui extends uiBuilder{
 	public $uiName="weui@1.1.3";
 	public $uiClassName="ui_weui";
